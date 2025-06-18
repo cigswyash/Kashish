@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Kashish 🎀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: pink url('https://i.pinimg.com/originals/2c/12/f4/2c12f47f017d37d1f3e5be1542210c97.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Baloo 2', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+    h1, h2, p {
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .btn {
+      background: #fff0f5;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ffc0cb;
+    }
+    #gift, #kitty-kiss, #final-msg, #proposal, #ending, #effort-msg {
+      display: none;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="start-text">Haye Ram! Meri Radha aagyi? 🥹💗</h1>
+  <h2 id="cutie-text">Uff maryegi kya cutie pie... loveeeee u bcha 💋</h2>
+
+  <button class="btn" onclick="showGift()">Open this — a smoll gift for u.. bcha 💝</button>
+
+  <div id="gift" class="fade-in">
+    <img src="https://media.tenor.com/_gGvD55y9A4AAAAi/cat-cute.gif" width="200" alt="Kitty Kiss">
+    <h2>Happiest birthday to my pansandida aurat meri jaan 🥹🥹🫶🏻</h2>
+    <p>I am soo soo sooo happy cuz my bcha ka birthday hai Aaj. I'm so excited for today ~ 💗</p>
+  </div>
+
+  <div id="final-msg" class="fade-in">
+    <p>You know you're the first one I loveeeee trulyyyy 😭❤️<br>I just wanna marry you my Radhaa 🥹🥹💋</p>
+    <p>Will you marry me?</p>
+    <button class="btn" onclick="acceptYes()">Yes</button>
+    <button class="btn" onclick="acceptNo()" id="no-btn">No</button>
+  </div>
+
+  <div id="proposal" class="fade-in">
+    <p id="proposal-text"></p>
+  </div>
+
+  <div id="ending" class="fade-in">
+    <img src="https://media.tenor.com/9WvYdjWvEBgAAAAi/cat-love.gif" width="200">
+    <h2>Happy Birthday Kashish 🎀</h2>
+    <p>Yeh banane mai mujhe bhot time laga istg 😩💖<br>I just love you smmm <3<br>I'm lucky to have a perfect girlfriend 😭</p>
+    <button class="btn" onclick="showEffortMsg()">🎀</button>
+  </div>
+
+  <div id="effort-msg" class="fade-in">
+    <p>😡😡 Why you so cutee? Why u click bar bar 😡😡<br>
+    C'mon mumma 🥹💋 Janta hu aaj tak kisi ne itne efforts ni lgaye tere liye<br>
+    but mai jinda hu na 😭😭 bcha I love u...<br>
+    Isliye toh krta hu — happy ho jao 💋💋💋</p>
+  </div>
+
+  <script>
+    function showGift() {
+      document.querySelector('button').style.display = 'none';
+      document.getElementById('gift').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('final-msg').style.display = 'block';
+      }, 4000);
+    }
+
+    function acceptYes() {
+      document.getElementById('proposal').style.display = 'block';
+      document.getElementById('proposal-text').innerText = "Omggg I love u so much 😭😭 You are married now 💋💋🥹 Kashish mwa!";
+      document.getElementById('final-msg').style.display = 'none';
+      setTimeout(() => {
+        document.getElementById('ending').style.display = 'block';
+      }, 4000);
+    }
+
+    function acceptNo() {
+      document.getElementById('no-btn').style.display = 'none';
+      document.getElementById('proposal').style.display = 'block';
+      document.getElementById('proposal-text').innerText = "STFU 💍 We're already married 🤭💗";
+    }
+
+    function showEffortMsg() {
+      document.getElementById('effort-msg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
